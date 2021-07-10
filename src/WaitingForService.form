@@ -20,17 +20,6 @@
           <text value="Not End Srevice :-"/>
         </properties>
       </component>
-      <component id="2d6b0" class="javax.swing.JButton" binding="searchButton" default-binding="true">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="200" height="30"/>
-            <maximum-size width="200" height="30"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="Search"/>
-        </properties>
-      </component>
       <component id="19a39" class="javax.swing.JTextField" binding="textField1" default-binding="true">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
@@ -39,6 +28,17 @@
           </grid>
         </constraints>
         <properties/>
+      </component>
+      <component id="2d6b0" class="javax.swing.JButton" binding="searchButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="180" height="30"/>
+            <maximum-size width="180" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Search"/>
+        </properties>
       </component>
     </children>
   </grid>
