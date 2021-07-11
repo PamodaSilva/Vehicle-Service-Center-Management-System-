@@ -273,7 +273,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="dd6a6" class="javax.swing.JButton" binding="delectButton" default-binding="true">
+      <component id="dd6a6" class="javax.swing.JButton" binding="deleteButton">
         <constraints>
           <grid row="9" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="100" height="30"/>
@@ -281,7 +281,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="Delect"/>
+          <text value="Delete"/>
         </properties>
       </component>
       <component id="1e8a2" class="javax.swing.JTextField" binding="textField10" default-binding="true">
