@@ -1,7 +1,7 @@
 import javax.swing.*;
 
-public class Payment {
-    private JPanel Payment;
+public class Payment extends JFrame {
+    public JPanel Payment;
     private JTextField textField1;
     private JButton searchButton;
     private JTextField textField2;

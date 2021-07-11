@@ -1,7 +1,7 @@
 import javax.swing.*;
 
-public class Customer {
-    private JPanel Customer;
+public class Customer extends JFrame{
+    public JPanel Customer;
     private JTextField textField1;
     private JTextField textField2;
     private JTextField textField3;

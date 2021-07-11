@@ -1,7 +1,7 @@
 import javax.swing.*;
 
-public class Service {
-    private JPanel Service;
+public class Service extends JFrame {
+    public JPanel Service;
     private JTextField textField1;
     private JTextField textField2;
     private JTextField textField3;
@@ -15,6 +15,6 @@ public class Service {
     private JButton addButton;
     private JComboBox comboBox2;
     private JTextField textField9;
-    private JButton delectButton;
+    private JButton deleteButton;
     private JTextField textField10;
 }
