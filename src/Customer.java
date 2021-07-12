@@ -1,4 +1,10 @@
+import com.test.Database;
+
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.*;
 
 public class Customer extends JFrame{
     public JPanel Customer;
@@ -9,6 +15,70 @@ public class Customer extends JFrame{
     private JTextField textField5;
     private JTextField textField6;
     private JButton addButton;
-    private JButton updateButton;
-    private JButton delectButton;
+    private JButton deleteButton;
+
+
+    public void register(String NIC, String Cus_Name, String Address, String TPHome, String TPMobile, String Email_add) {
+        try{
+            Connection con = Database.getConnection();
+            String sqlQuery = "INSERT INTO customer (NIC,Name,Address,TPHome,TPMobile,Email)VALUES (?, ?, ?, ?, ?, ?)";
+
+            PreparedStatement preparedStatement = con.prepareStatement(sqlQuery);
+            preparedStatement.setString(1,NIC);
+            preparedStatement.setString(2,Cus_Name);
+            preparedStatement.setString(3,Address);
+            preparedStatement.setString(4,TPHome);
+            preparedStatement.setString(5, TPMobile);
+            preparedStatement.setString(6,Email_add);
+
+            try {
+                preparedStatement.execute();
+                JOptionPane.showMessageDialog(null," Insert Data ");
+
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(null," Have some Error !!!"+ e.getMessage());
+            }
+            con.close();
+
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null,"Oops !!!\n Have Some Error!!!"+ e.getMessage());
+        }
+    }
+
+    public Customer() {
+        addButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String NIC,Name,Address,TPHome,TPMobile,Email;
+
+                NIC = textField1.getText();
+                Name = textField2.getText();
+                Address = textField3.getText();
+                TPHome = textField4.getText();
+                TPMobile = textField5.getText();
+                Email = textField6.getText();
+
+                try {
+                    register(NIC,Name,Address,TPHome,TPMobile,Email);
+                } catch (Exception x) {
+                    x.printStackTrace();
+                }
+
+                textField1.setText("");
+                textField2.setText("");
+                textField3.setText("");
+                textField4.setText("");
+                textField5.setText("");
+                textField6.setText("");
+
+            }
+        });
+    }
+    //public static void main(String[] args) {
+    //    Customer cus = new Customer();       // To show Customer page
+    //    cus.setContentPane(new Customer().Customer);
+    //    cus.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    //    cus.setVisible(true);
+    //    cus.pack();
+   // }
 }
