@@ -1,7 +1,6 @@
 import com.test.Database;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
@@ -15,8 +14,7 @@ public class Customer extends JFrame{
     private JTextField textField5;
     private JTextField textField6;
     private JButton addButton;
-    private JButton deleteButton;
-
+    private JButton Button2;
 
     public void register(String NIC, String Cus_Name, String Address, String TPHome, String TPMobile, String Email_add) {
         try{
@@ -36,12 +34,12 @@ public class Customer extends JFrame{
                 JOptionPane.showMessageDialog(null," Insert Data ");
 
             }catch (Exception e){
-                JOptionPane.showMessageDialog(null," Have some Error !!!"+ e.getMessage());
+                JOptionPane.showMessageDialog(null," Have some Error !"+ e.getMessage());
             }
             con.close();
 
         }catch (Exception e){
-            JOptionPane.showMessageDialog(null,"Oops !!!\n Have Some Error!!!"+ e.getMessage());
+            JOptionPane.showMessageDialog(null,"Oops !!!\n Have Some Error !"+ e.getMessage());
         }
     }
 
@@ -59,9 +57,13 @@ public class Customer extends JFrame{
                 Email = textField6.getText();
 
                 try {
-                    register(NIC,Name,Address,TPHome,TPMobile,Email);
+                    if (NIC.equals("") && Name.equals("") && Address.equals("") && TPHome.equals("") && TPMobile.equals("") && Email.equals("")){
+                        JOptionPane.showMessageDialog(null," Can not enter data");
+                    }else {
+                        register(NIC,Name,Address,TPHome,TPMobile,Email);
+                    }
                 } catch (Exception x) {
-                    x.printStackTrace();
+                    System.out.println(x);;
                 }
 
                 textField1.setText("");
@@ -73,12 +75,15 @@ public class Customer extends JFrame{
 
             }
         });
+        Button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AdminPage A = new AdminPage();       // To show Admin page
+                A.setContentPane(new AdminPage().AdminPage);
+                A.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                A.setVisible(true);
+                A.pack();
+            }
+        });
     }
-    //public static void main(String[] args) {
-    //    Customer cus = new Customer();       // To show Customer page
-    //    cus.setContentPane(new Customer().Customer);
-    //    cus.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    //    cus.setVisible(true);
-    //    cus.pack();
-   // }
 }
