@@ -50,7 +50,7 @@
         <properties>
           <font name="Cambria" size="14"/>
           <foreground color="-16448251"/>
-          <text value="Sevice ID"/>
+          <text value="Service ID"/>
         </properties>
       </component>
       <component id="a0937" class="javax.swing.JLabel">
@@ -313,7 +313,7 @@
         <properties>
           <font size="14"/>
           <foreground color="-16448251"/>
-          <text value="Sevice ID"/>
+          <text value="Service ID"/>
         </properties>
       </component>
       <component id="c3c2f" class="javax.swing.JTextField" binding="textField9" default-binding="true">

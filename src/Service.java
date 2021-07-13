@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-public class Service extends JFrame {
+public class Service extends JFrame{
     public JPanel Service;
     private JTextField textField1;
     private JTextField textField2;
@@ -14,23 +14,24 @@ public class Service extends JFrame {
     private JTextField textField4;
     private JTextField textField5;
     private JTextField textField6;
-    private JComboBox comboBox1;
+    private JComboBox <String>comboBox1;
     private JTextField textField7;
     private JTextField textField8;
     private JButton updateButton;
     private JButton addButton;
-    private JComboBox comboBox2;
+    private JComboBox <String>comboBox2;
     private JTextField textField9;
     private JButton deleteButton;
     private JTextField textField10;
     private JTextField textField11;
     private JButton backToAdminPageButton;
 
+
     public void ser_register(String Service_ID,String Vehicle_Number,String Model,String Model_Number,String Owner_NIC,String Owner_Name,String Date,String Service_Type,int Bill){
         try{
             Connection con = Database.getConnection();
             String sqlQuery = "INSERT INTO service VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            String SQL = "INSERT INTO payment VALUES (NULL, ?, ?, ?, ?)";
+            String SQL = "INSERT INTO payment VALUES (NULL, ?, ?, ?, ?, ?)";
 
             PreparedStatement preparedStatement = con.prepareStatement(sqlQuery);
             preparedStatement.setString(1,Service_ID);
@@ -47,7 +48,8 @@ public class Service extends JFrame {
             preparedStatement1.setString(1,Service_ID);
             preparedStatement1.setString(2,Vehicle_Number);
             preparedStatement1.setString(3,String.valueOf(Bill));
-            preparedStatement1.setString(4,Date);
+            preparedStatement1.setString(4,Service_Type);
+            preparedStatement1.setString(5,Date);
 
             try {
                 preparedStatement.execute();
@@ -61,6 +63,36 @@ public class Service extends JFrame {
 
         }catch (Exception e){
             JOptionPane.showMessageDialog(null,"Oops !!!\n Have Some Error !! \n "+  e.getMessage());
+        }
+    }
+
+    public void update(int Bill, String Service_ID){
+        try {
+            Connection con = Database.getConnection();
+            String sqlQuery = "UPDATE `service` SET `Bill Amount` = ? WHERE `Service ID` = ?";
+
+            PreparedStatement preparedStatement = con.prepareStatement(sqlQuery);
+            preparedStatement.setString(1,String.valueOf(Bill));
+            preparedStatement.setString(2,Service_ID);
+
+            String SQL = "UPDATE `payment` SET `Bill` = ? WHERE `Service ID` = ?";
+
+            PreparedStatement preparedStatement1 = con.prepareStatement(SQL);
+            preparedStatement1.setString(1,String.valueOf(Bill));
+            preparedStatement1.setString(2,Service_ID);
+
+            try {
+                preparedStatement.executeUpdate();
+                preparedStatement1.executeUpdate();
+                JOptionPane.showMessageDialog(null," Update Data ");
+
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(null," Have some Error !"+ e.getMessage());
+            }
+            con.close();
+
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null,"Oops !!!\n Have Some Error !"+ e.getMessage());
         }
     }
 
@@ -103,6 +135,31 @@ public class Service extends JFrame {
                 textField10.setText("");
 
 
+            }
+        });
+        updateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String Service_ID;
+                int Bill;
+
+                Service_ID = textField7.getText();
+                Bill = Integer.parseInt(textField8.getText());
+
+                update(Bill,Service_ID);
+
+                textField7.setText("");
+                textField8.setText("");
+            }
+        });
+        backToAdminPageButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AdminPage A = new AdminPage();       // To show Admin page
+                A.setContentPane(new AdminPage().AdminPage);
+                A.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                A.setVisible(true);
+                A.pack();
             }
         });
     }
