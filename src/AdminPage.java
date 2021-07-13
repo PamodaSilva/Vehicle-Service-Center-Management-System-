@@ -17,8 +17,9 @@ public class AdminPage extends JFrame {
                 Customer cus = new Customer();       // To show Customer page
                 cus.setContentPane(new Customer().Customer);
                 cus.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                cus.setVisible(true);
                 cus.pack();
+                cus.setVisible(true);
+
 
 
             }
@@ -29,8 +30,8 @@ public class AdminPage extends JFrame {
                 Vehicle v = new Vehicle();       // To show vehicle page
                 v.setContentPane(new Vehicle().Vehicle);
                 v.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                v.setVisible(true);
                 v.pack();
+                v.setVisible(true);
 
             }
         });
@@ -40,8 +41,9 @@ public class AdminPage extends JFrame {
                 Service Ser = new Service();       // To show service page
                 Ser.setContentPane(new Service().Service);
                 Ser.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                Ser.setVisible(true);
                 Ser.pack();
+                Ser.setVisible(true);
+
 
             }
         });
@@ -51,8 +53,9 @@ public class AdminPage extends JFrame {
                 Payment pay = new Payment();  // To show payment page
                 pay.setContentPane(new Payment().Payment);
                 pay.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                pay.setVisible(true);
                 pay.pack();
+                pay.setVisible(true);
+
 
             }
         });
@@ -62,8 +65,9 @@ public class AdminPage extends JFrame {
                 WaitingForService WFS = new WaitingForService();  // To show Waiting For Service page
                 WFS.setContentPane(new WaitingForService().WaitForService);
                 WFS.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                WFS.setVisible(true);
                 WFS.pack();
+                WFS.setVisible(true);
+
 
             }
         });
@@ -73,7 +77,8 @@ public class AdminPage extends JFrame {
         AdminPage A = new AdminPage();       // To show Admin page
         A.setContentPane(new AdminPage().AdminPage);
         A.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        A.setVisible(true);
         A.pack();
+        A.setVisible(true);
+
     }
 }

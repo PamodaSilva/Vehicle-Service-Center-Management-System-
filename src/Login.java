@@ -22,8 +22,8 @@ public class Login extends JFrame{
                     AdminPage A = new AdminPage();       // To show Admin page
                     A.setContentPane(new AdminPage().AdminPage);
                     A.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                    A.setVisible(true);
                     A.pack();
+                    A.setVisible(true);
 
 
 

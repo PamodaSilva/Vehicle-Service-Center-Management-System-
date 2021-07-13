@@ -13,7 +13,7 @@ public class Vehicle extends JFrame{
     private JTextField textField3;
     private JTextField textField4;
     private JTextField textField5;
-    private JComboBox comboBox1;
+    private JComboBox<String> comboBox1;
     private JButton AddButton;
     private JButton Button2;
     public JPanel Vehicle;
@@ -67,7 +67,7 @@ public class Vehicle extends JFrame{
                         Veh_register(Vehicle_Number,Owner_NIC,Owner_name,Vehicle_Model,Model_Number,Fuel_Type);
                     }
                 } catch (Exception x) {
-                    System.out.println(x);;
+                    System.out.println(x);
                 }
 
                 textField1.setText("");
@@ -75,7 +75,7 @@ public class Vehicle extends JFrame{
                 textField3.setText("");
                 textField4.setText("");
                 textField5.setText("");
-                comboBox1.setSelectedItem("Select Fuel Type.");;
+                comboBox1.setSelectedItem("Select Fuel Type.");
 
 
             }
@@ -87,8 +87,9 @@ public class Vehicle extends JFrame{
                 AdminPage A = new AdminPage();       // To show Admin page
                 A.setContentPane(new AdminPage().AdminPage);
                 A.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                A.setVisible(true);
                 A.pack();
+                A.setVisible(true);
+
             }
         });
     }

@@ -58,12 +58,12 @@ public class Customer extends JFrame{
 
                 try {
                     if (NIC.equals("") && Name.equals("") && Address.equals("") && TPHome.equals("") && TPMobile.equals("") && Email.equals("")){
-                        JOptionPane.showMessageDialog(null," Can not enter data");
+                        JOptionPane.showMessageDialog(null," You Can not Insert data");
                     }else {
                         register(NIC,Name,Address,TPHome,TPMobile,Email);
                     }
                 } catch (Exception x) {
-                    System.out.println(x);;
+                    System.out.println(x);
                 }
 
                 textField1.setText("");
