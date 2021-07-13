@@ -95,7 +95,27 @@ public class Service extends JFrame{
             JOptionPane.showMessageDialog(null,"Oops !!!\n Have Some Error !"+ e.getMessage());
         }
     }
+    public void Delete(String Service_ID){
+        try {
+            Connection con = Database.getConnection();
+            String sqlQuery = "DELETE FROM `service` WHERE `Service ID` = ?";
 
+            PreparedStatement preparedStatement = con.prepareStatement(sqlQuery);
+            preparedStatement.setString(1,Service_ID);
+
+            try {
+                preparedStatement.executeUpdate();
+                JOptionPane.showMessageDialog(null," Delete the row ");
+
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(null," Have some Error !"+ e.getMessage());
+            }
+            con.close();
+
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null,"Oops !!!\n Have Some Error !"+ e.getMessage());
+        }
+    }
 
     public Service() {
         addButton.addActionListener(new ActionListener() {
@@ -152,6 +172,26 @@ public class Service extends JFrame{
                 textField8.setText("");
             }
         });
+
+        deleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String Service_ID , Pay_the_Bill;
+
+                Service_ID = textField9.getText();
+                Pay_the_Bill = comboBox2.getSelectedItem().toString();
+
+                if (Pay_the_Bill.equals("Yes")){
+                    Delete(Service_ID);
+                }else {
+                    JOptionPane.showMessageDialog(null," This customer has not do payment then you can not delete this row");
+                }
+                textField9.setText("");
+                comboBox2.setSelectedItem("Select you pay Bill.");
+
+            }
+        });
+
         backToAdminPageButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
