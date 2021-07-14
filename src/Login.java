@@ -7,6 +7,12 @@ public class Login extends JFrame{
     private JTextField textField1;
     private JPasswordField passwordField1;
     private JButton loginButton;
+    public JLabel ImageLabel;
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+        ImageLabel = new JLabel(new ImageIcon("photo1.png"));
+    }
 
     public Login() {
         loginButton.addActionListener(new ActionListener() {
@@ -28,7 +34,7 @@ public class Login extends JFrame{
 
 
                 }else {
-                    JOptionPane.showMessageDialog(null, " Invalid Login "); // Message box
+                    JOptionPane.showMessageDialog(null, " Invalid Login , Username or Password Incorrect"); // Message box
                 }
 
             }

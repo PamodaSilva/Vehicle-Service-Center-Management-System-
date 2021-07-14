@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -9,6 +10,12 @@ public class AdminPage extends JFrame {
     private JButton serviceButton;
     private JButton paymentButton;
     private JButton WaitingForServiceButton;
+    public JLabel ImageLabel;
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+        ImageLabel = new JLabel(new ImageIcon("photo2.jpg"));
+    }
 
     public AdminPage() {
         customerButton.addActionListener(new ActionListener() {
@@ -16,6 +23,7 @@ public class AdminPage extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Customer cus = new Customer();       // To show Customer page
                 cus.setContentPane(new Customer().Customer);
+                cus.setPreferredSize(new Dimension(600,550));
                 cus.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 cus.pack();
                 cus.setVisible(true);
@@ -81,4 +89,6 @@ public class AdminPage extends JFrame {
         A.setVisible(true);
 
     }
+
+
 }
