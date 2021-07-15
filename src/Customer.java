@@ -39,7 +39,7 @@ public class Customer extends JFrame{
             con.close();
 
         }catch (Exception e){
-            JOptionPane.showMessageDialog(null,"Oops !!!\n Have Some Error !"+ e.getMessage());
+            JOptionPane.showMessageDialog(null,"Error !!! \n "+ e.getMessage());
         }
     }
 

@@ -15,7 +15,6 @@ public class WaitingForService extends JFrame{
     private JTable table1;
     private JScrollPane table_1;
 
-
     public void connect() {
         try {
             Connection con = Database.getConnection();
@@ -26,14 +25,13 @@ public class WaitingForService extends JFrame{
         }catch (Exception e){
             JOptionPane.showMessageDialog(null," Have some Error !"+ e.getMessage());
         }
-
     }
 
     public WaitingForService() {
         searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               connect();
+                connect();
             }
         });
         backToAdminPageButton.addActionListener(new ActionListener() {

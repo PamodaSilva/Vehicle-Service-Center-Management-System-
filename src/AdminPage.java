@@ -14,7 +14,7 @@ public class AdminPage extends JFrame {
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
-        ImageLabel = new JLabel(new ImageIcon("photo2.jpg"));
+        ImageLabel = new JLabel(new ImageIcon("pic2.jpg"));
     }
 
     public AdminPage() {
@@ -27,7 +27,6 @@ public class AdminPage extends JFrame {
                 cus.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 cus.pack();
                 cus.setVisible(true);
-
 
 
             }

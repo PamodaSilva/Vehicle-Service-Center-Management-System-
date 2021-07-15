@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -8,10 +9,11 @@ public class Login extends JFrame{
     private JPasswordField passwordField1;
     private JButton loginButton;
     public JLabel ImageLabel;
+    public JFrame login;
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
-        ImageLabel = new JLabel(new ImageIcon("photo1.png"));
+        ImageLabel = new JLabel(new ImageIcon("pic1.jpg"));
     }
 
     public Login() {
@@ -23,7 +25,7 @@ public class Login extends JFrame{
                 String pass = new String(password); // convert to string value
 
                 if (username.equals("Admin") && pass.equals("123")){
-                    JOptionPane.showMessageDialog(null," Login Success "); // Message Box
+                    JOptionPane.showMessageDialog(null," Login Success !!! "); // Message Box
 
                     AdminPage A = new AdminPage();       // To show Admin page
                     A.setContentPane(new AdminPage().AdminPage);
@@ -31,12 +33,11 @@ public class Login extends JFrame{
                     A.pack();
                     A.setVisible(true);
 
-
+                    login.dispose();
 
                 }else {
                     JOptionPane.showMessageDialog(null, " Invalid Login , Username or Password Incorrect"); // Message box
                 }
-
             }
         });
     }
@@ -47,6 +48,5 @@ public class Login extends JFrame{
         log.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         log.setVisible(true);
         log.pack();
-
     }
 }

@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-
 public class Vehicle extends JFrame{
     private JTextField textField1;
     private JTextField textField2;
@@ -42,10 +41,9 @@ public class Vehicle extends JFrame{
             con.close();
 
         }catch (Exception e){
-            JOptionPane.showMessageDialog(null,"Oops !!!\n Have Some Error ! \n "+  e.getMessage());
+            JOptionPane.showMessageDialog(null,"Error !! \n "+  e.getMessage());
         }
     }
-
 
     public Vehicle() {
         AddButton.addActionListener(new ActionListener() {
@@ -76,7 +74,6 @@ public class Vehicle extends JFrame{
                 textField4.setText("");
                 textField5.setText("");
                 comboBox1.setSelectedItem("Select Fuel Type.");
-
 
             }
         });

@@ -62,7 +62,7 @@ public class Service extends JFrame{
             con.close();
 
         }catch (Exception e){
-            JOptionPane.showMessageDialog(null,"Oops !!!\n Have Some Error !! \n "+  e.getMessage());
+            JOptionPane.showMessageDialog(null,"Error !!! \n "+  e.getMessage());
         }
     }
 
@@ -84,7 +84,7 @@ public class Service extends JFrame{
             try {
                 preparedStatement.executeUpdate();
                 preparedStatement1.executeUpdate();
-                JOptionPane.showMessageDialog(null," Update Data ");
+                JOptionPane.showMessageDialog(null," Update Data !! ");
 
             }catch (Exception e){
                 JOptionPane.showMessageDialog(null," Have some Error !"+ e.getMessage());
@@ -92,7 +92,7 @@ public class Service extends JFrame{
             con.close();
 
         }catch (Exception e){
-            JOptionPane.showMessageDialog(null,"Oops !!!\n Have Some Error !"+ e.getMessage());
+            JOptionPane.showMessageDialog(null,"Error !!! \n"+ e.getMessage());
         }
     }
     public void Delete(String Service_ID){
@@ -113,7 +113,7 @@ public class Service extends JFrame{
             con.close();
 
         }catch (Exception e){
-            JOptionPane.showMessageDialog(null,"Oops !!!\n Have Some Error !"+ e.getMessage());
+            JOptionPane.showMessageDialog(null,"Error !!! \n"+ e.getMessage());
         }
     }
 
@@ -153,7 +153,6 @@ public class Service extends JFrame{
                 textField11.setText("");
                 comboBox1.setSelectedItem("Select Service Type");
                 textField10.setText("");
-
 
             }
         });
