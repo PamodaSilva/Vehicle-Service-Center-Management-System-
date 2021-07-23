@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -9,7 +8,6 @@ public class Login extends JFrame{
     private JPasswordField passwordField1;
     private JButton loginButton;
     public JLabel ImageLabel;
-    public JFrame login;
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
@@ -33,8 +31,6 @@ public class Login extends JFrame{
                     A.pack();
                     A.setVisible(true);
 
-                    login.dispose();
-
                 }else {
                     JOptionPane.showMessageDialog(null, " Invalid Login , Username or Password Incorrect"); // Message box
                 }
@@ -43,10 +39,10 @@ public class Login extends JFrame{
     }
 
     public static void main(String[] args) {
-        Login log = new Login();
-        log.setContentPane(new Login().main);
-        log.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        log.setVisible(true);
-        log.pack();
+        JFrame frame = new JFrame();
+        frame.setContentPane(new Login().main);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame.pack();
     }
 }
