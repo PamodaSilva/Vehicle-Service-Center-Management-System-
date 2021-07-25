@@ -14,6 +14,12 @@ public class WaitingForService extends JFrame{
     private JButton backToAdminPageButton;
     private JTable table1;
     private JScrollPane table_1;
+    public JLabel ImageLabel;
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+        ImageLabel = new JLabel(new ImageIcon("pic8.jpg"));
+    }
 
     public void connect() {
         try {

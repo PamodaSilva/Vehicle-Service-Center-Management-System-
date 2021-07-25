@@ -23,6 +23,12 @@ public class Payment extends JFrame {
     private JTextField textField8;
     private JScrollPane table_1;
     private JButton backToAdminPageButton;
+    public JLabel ImageLabel;
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+        ImageLabel = new JLabel(new ImageIcon("pic9.jpg"));
+    }
 
     public void table(String start_date , String end_date) {
         try {

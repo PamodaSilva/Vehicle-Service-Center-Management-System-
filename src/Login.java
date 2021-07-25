@@ -14,15 +14,26 @@ public class Login extends JFrame{
         ImageLabel = new JLabel(new ImageIcon("pic1.jpg"));
     }
 
+    // Encapsulation..
+    private String username;
+    private char[] password;
+
+    public String getUsername(){
+        username = textField1.getText();
+        return username;
+    }
+    public String getPassword(){
+        password = passwordField1.getPassword();
+        String pass = new String(password); // convert to string value
+        return pass;
+    } //....
+
     public Login() {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String username = textField1.getText();
-                char[] password = passwordField1.getPassword();
-                String pass = new String(password); // convert to string value
 
-                if (username.equals("Admin") && pass.equals("123")){
+                if (getUsername().equals("Admin") && getPassword().equals("admin123")){
                     JOptionPane.showMessageDialog(null," Login Success !!! "); // Message Box
 
                     AdminPage A = new AdminPage();       // To show Admin page
@@ -32,14 +43,14 @@ public class Login extends JFrame{
                     A.setVisible(true);
 
                 }else {
-                    JOptionPane.showMessageDialog(null, " Invalid Login , Username or Password Incorrect"); // Message box
+                    JOptionPane.showMessageDialog(null, " Invalid Login \n Username or Password Incorrect"); // Message box
                 }
             }
         });
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame(" Vehicle Center Management System ");
         frame.setContentPane(new Login().main);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);

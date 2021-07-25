@@ -15,6 +15,12 @@ public class Customer extends JFrame{
     private JTextField textField6;
     private JButton addButton;
     private JButton Button2;
+    public JLabel ImageLabel;
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+        ImageLabel = new JLabel(new ImageIcon("pic3.jpg"));
+    }
 
     public void register(String NIC, String Cus_Name, String Address, String TPHome, String TPMobile, String Email_add) {
         try{

@@ -23,11 +23,10 @@ public class AdminPage extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Customer cus = new Customer();       // To show Customer page
                 cus.setContentPane(new Customer().Customer);
-                cus.setPreferredSize(new Dimension(600,550));
+                cus.setPreferredSize(new Dimension(800,550));
                 cus.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 cus.pack();
                 cus.setVisible(true);
-
 
             }
         });
@@ -36,6 +35,7 @@ public class AdminPage extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Vehicle v = new Vehicle();       // To show vehicle page
                 v.setContentPane(new Vehicle().Vehicle);
+                v.setPreferredSize(new Dimension(950,550));
                 v.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 v.pack();
                 v.setVisible(true);
@@ -47,10 +47,10 @@ public class AdminPage extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Service Ser = new Service();       // To show service page
                 Ser.setContentPane(new Service().Service);
+                Ser.setPreferredSize(new Dimension(1050,540));
                 Ser.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 Ser.pack();
                 Ser.setVisible(true);
-
 
             }
         });
@@ -59,10 +59,10 @@ public class AdminPage extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Payment pay = new Payment();  // To show payment page
                 pay.setContentPane(new Payment().Payment);
+                pay.setPreferredSize(new Dimension(1000,700));
                 pay.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 pay.pack();
                 pay.setVisible(true);
-
 
             }
         });
@@ -74,7 +74,6 @@ public class AdminPage extends JFrame {
                 WFS.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 WFS.pack();
                 WFS.setVisible(true);
-
 
             }
         });
@@ -88,6 +87,4 @@ public class AdminPage extends JFrame {
         A.setVisible(true);
 
     }
-
-
 }

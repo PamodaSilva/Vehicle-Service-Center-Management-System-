@@ -16,7 +16,12 @@ public class Vehicle extends JFrame{
     private JButton AddButton;
     private JButton Button2;
     public JPanel Vehicle;
+    public JLabel ImageLabel;
 
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+        ImageLabel = new JLabel(new ImageIcon("pic5.jpg"));
+    }
 
     public void Veh_register(String V_num, String Ow_NIC, String Ow_Name, String V_model, String Model_num,String Fuel_Type){
         try{
@@ -89,10 +94,6 @@ public class Vehicle extends JFrame{
 
             }
         });
-    }
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
     }
 }
 

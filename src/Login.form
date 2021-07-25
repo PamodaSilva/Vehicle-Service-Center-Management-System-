@@ -7,7 +7,7 @@
     </constraints>
     <properties>
       <background color="-4479616"/>
-      <foreground color="-5197132"/>
+      <foreground color="-197380"/>
     </properties>
     <border type="line"/>
     <children>
@@ -19,6 +19,7 @@
         </constraints>
         <properties>
           <font size="20" style="1"/>
+          <foreground color="-16448251"/>
           <text value="ABC Auto Service Center"/>
         </properties>
       </component>
@@ -64,6 +65,7 @@
         </constraints>
         <properties>
           <font size="16"/>
+          <foreground color="-16448251"/>
           <text value="Username"/>
         </properties>
       </component>
@@ -73,6 +75,7 @@
         </constraints>
         <properties>
           <font size="16"/>
+          <foreground color="-16448251"/>
           <text value="Password"/>
         </properties>
       </component>
@@ -139,7 +142,9 @@
           </grid>
         </constraints>
         <properties>
+          <background color="-7439778"/>
           <font size="12" style="1"/>
+          <foreground color="-16448251"/>
           <horizontalAlignment value="0"/>
           <text value="Login"/>
         </properties>
@@ -162,6 +167,7 @@
         <properties>
           <background color="-4505538"/>
           <font size="22" style="1"/>
+          <foreground color="-16448251"/>
           <text value="Welcome"/>
           <verticalAlignment value="0"/>
           <verticalTextPosition value="0"/>
