@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="Vehicle" layout-manager="GridLayoutManager" row-count="10" column-count="18" same-size-horizontally="false" same-size-vertically="false" hgap="10" vgap="10">
     <margin top="10" left="20" bottom="20" right="30"/>
     <constraints>
-      <xy x="20" y="20" width="729" height="384"/>
+      <xy x="20" y="20" width="1030" height="508"/>
     </constraints>
     <properties>
       <background color="-4210753"/>
@@ -29,7 +29,7 @@
         <properties>
           <font size="14"/>
           <foreground color="-16448251"/>
-          <text value="Vehicle Number"/>
+          <text value="Vehicle Number :"/>
         </properties>
       </component>
       <component id="5450" class="javax.swing.JLabel">
@@ -39,7 +39,7 @@
         <properties>
           <font size="14"/>
           <foreground color="-16448251"/>
-          <text value="Owner NIC"/>
+          <text value="Owner NIC :"/>
         </properties>
       </component>
       <component id="afb42" class="javax.swing.JLabel">
@@ -49,7 +49,7 @@
         <properties>
           <font size="14"/>
           <foreground color="-16448251"/>
-          <text value="Owner Name"/>
+          <text value="Owner Name :"/>
         </properties>
       </component>
       <component id="d216a" class="javax.swing.JTextField" binding="textField5" default-binding="true">
@@ -68,7 +68,7 @@
         <properties>
           <font size="14"/>
           <foreground color="-16448251"/>
-          <text value="Vehicle Model"/>
+          <text value="Vehicle Model :"/>
         </properties>
       </component>
       <component id="8b8ba" class="javax.swing.JLabel">
@@ -78,7 +78,7 @@
         <properties>
           <font size="14"/>
           <foreground color="-16448251"/>
-          <text value="Model Number"/>
+          <text value=" Model Number :"/>
         </properties>
       </component>
       <component id="cf737" class="javax.swing.JLabel">
@@ -88,7 +88,7 @@
         <properties>
           <font size="14"/>
           <foreground color="-16448251"/>
-          <text value="Fuel Type"/>
+          <text value="Fuel Type :"/>
         </properties>
       </component>
       <component id="47619" class="javax.swing.JTextField" binding="textField1" default-binding="true">
@@ -151,11 +151,12 @@
           </grid>
         </constraints>
       </vspacer>
-      <component id="de29c" class="javax.swing.JLabel" binding="ImageLabel" custom-create="true">
+      <component id="de29c" class="javax.swing.JLabel">
         <constraints>
           <grid row="3" column="15" row-span="4" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <icon value="com/test/pic5.jpg"/>
           <text value=""/>
         </properties>
       </component>

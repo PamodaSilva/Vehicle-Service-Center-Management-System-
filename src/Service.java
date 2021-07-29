@@ -25,12 +25,6 @@ public class Service extends JFrame{
     private JTextField textField10;
     private JTextField textField11;
     private JButton backToAdminPageButton;
-    public JLabel ImageLabel;
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-        ImageLabel = new JLabel(new ImageIcon("pic6.jpg"));
-    }
 
     public void ser_register(String Service_ID,String Vehicle_Number,String Model,String Model_Number,String Owner_NIC,String Owner_Name,String Date,String Service_Type,int Bill){
         try{

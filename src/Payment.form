@@ -144,7 +144,7 @@
         <properties>
           <font size="14"/>
           <foreground color="-16448251"/>
-          <text value="Vehicle Number"/>
+          <text value="Vehicle Number :"/>
         </properties>
       </component>
       <component id="d3e8f" class="javax.swing.JTextField" binding="textField2" default-binding="true">
@@ -163,7 +163,7 @@
         <properties>
           <font size="14"/>
           <foreground color="-16448251"/>
-          <text value="Service Type"/>
+          <text value="Service Type :"/>
         </properties>
       </component>
       <component id="8bab5" class="javax.swing.JTextField" binding="textField6" default-binding="true">
@@ -202,7 +202,7 @@
         <properties>
           <font size="14"/>
           <foreground color="-16448251"/>
-          <text value="Bill"/>
+          <text value="Bill :"/>
         </properties>
       </component>
       <component id="379e7" class="javax.swing.JLabel">
@@ -304,12 +304,13 @@
           <text value="Payment Details"/>
         </properties>
       </component>
-      <component id="d3af8" class="javax.swing.JLabel" binding="ImageLabel" custom-create="true">
+      <component id="d3af8" class="javax.swing.JLabel">
         <constraints>
           <grid row="2" column="11" row-span="4" col-span="10" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <foreground color="-15921907"/>
+          <icon value="com/test/pic9.jpg"/>
           <text value=""/>
         </properties>
       </component>

@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="main" layout-manager="GridLayoutManager" row-count="8" column-count="12" same-size-horizontally="false" same-size-vertically="false" hgap="2" vgap="1">
     <margin top="50" left="30" bottom="50" right="50"/>
     <constraints>
-      <xy x="20" y="26" width="698" height="442"/>
+      <xy x="20" y="26" width="976" height="593"/>
     </constraints>
     <properties>
       <background color="-4479616"/>
@@ -20,7 +20,7 @@
         <properties>
           <font size="20" style="1"/>
           <foreground color="-16448251"/>
-          <text value="ABC Auto Service Center"/>
+          <text value="ABC Auto Sevice Center..."/>
         </properties>
       </component>
       <hspacer id="47330">
@@ -33,12 +33,13 @@
           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
       </hspacer>
-      <component id="870d8" class="javax.swing.JLabel" binding="ImageLabel" custom-create="true">
+      <component id="870d8" class="javax.swing.JLabel">
         <constraints>
           <grid row="3" column="7" row-span="5" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <foreground color="-12828863"/>
+          <icon value="com/test/pic1.jpg"/>
           <requestFocusEnabled value="false"/>
           <text value=""/>
         </properties>

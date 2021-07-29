@@ -7,12 +7,6 @@ public class Login extends JFrame{
     private JTextField textField1;
     private JPasswordField passwordField1;
     private JButton loginButton;
-    public JLabel ImageLabel;
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-        ImageLabel = new JLabel(new ImageIcon("pic1.jpg"));
-    }
 
     // Encapsulation..
     private String username;

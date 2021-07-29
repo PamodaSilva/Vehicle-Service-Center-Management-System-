@@ -17,7 +17,7 @@
         <properties>
           <font size="18" style="1"/>
           <foreground color="-16448251"/>
-          <text value="Not End Srevice List :-"/>
+          <text value="Not End Srevice List  :-"/>
         </properties>
       </component>
       <scrollpane id="15a66" binding="table_1">
@@ -52,12 +52,13 @@
           <text value="Search"/>
         </properties>
       </component>
-      <component id="85d84" class="javax.swing.JLabel" binding="ImageLabel" custom-create="true">
+      <component id="85d84" class="javax.swing.JLabel">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <foreground color="-15921907"/>
+          <icon value="com/test/pic8.jpg"/>
           <text value=""/>
         </properties>
       </component>

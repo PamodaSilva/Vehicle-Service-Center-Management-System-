@@ -10,12 +10,6 @@ public class AdminPage extends JFrame {
     private JButton serviceButton;
     private JButton paymentButton;
     private JButton WaitingForServiceButton;
-    public JLabel ImageLabel;
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-        ImageLabel = new JLabel(new ImageIcon("pic2.jpg"));
-    }
 
     public AdminPage() {
         customerButton.addActionListener(new ActionListener() {
