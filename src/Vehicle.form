@@ -19,7 +19,7 @@
           <background color="-16448251"/>
           <font size="22" style="1"/>
           <foreground color="-16448251"/>
-          <text value="Vehical Details"/>
+          <text value="Vehicle Details"/>
         </properties>
       </component>
       <component id="6a7ab" class="javax.swing.JLabel">
